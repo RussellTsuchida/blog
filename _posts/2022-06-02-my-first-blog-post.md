@@ -4,4 +4,4 @@ date: 2022-06-02
 ---
 Does Latex work? 
 
-$y = x + 2$
+Some inline \(y = x + 2\) and some dispalyed $$ y = x+ 2$$
