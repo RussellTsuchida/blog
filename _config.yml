@@ -10,3 +10,5 @@ github_username:  RussellTsuchida # DO NOT include the @ character, or else the 
 
 show_excerpts: true # set to false to remove excerpts on the homepage
 theme: minima
+
+BASE_PATH : /blog
