@@ -17,4 +17,4 @@ and
 
 $$ p(z_i \mid x_i, W, \mu, \sigma^2) = \mathcal{N}(m, C), \\
 m = W^\top(W W^\top + \sigma^2 I)^{-1}(x_i - \mu), \\
-C = I = W^\top(W W^\top + \sigma^2 I)^{-1} W.$$
+C = I - W^\top(W W^\top + \sigma^2 I)^{-1} W.$$
