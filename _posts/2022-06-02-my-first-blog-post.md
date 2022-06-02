@@ -12,4 +12,7 @@ We are given access to a dataset $$X \in \mathbb{R}^{N \times d}$$, which repres
 Given our model, we may estimate the values of $$W$$ and $$\mu$$ by maximum likelihood estimation, and infer the distribution over $$Z$$ by examining the posterior. Since the Gaussian distribution is in some sense closed under marginalisation and conditioning, the marginal likelihood and posterior can be found in closed form. These are
 
 $$ p(x_i \mid W, \mu, \sigma^2 ) = \mathcal{N} (\mu, W W^\top + \sigma^2 I ) $$
+
+and
+
 $$ p(z_i \mid x_i, W, \mu, \sigma^2) = \mathcal{N}(m, C), \quad m = W^\top(W W^\top + \sigma^2 I)^{-1}(x_i - \mu), \quad C = I = W^\top(W W^\top + \sigma^2 I)^{-1} W $$
