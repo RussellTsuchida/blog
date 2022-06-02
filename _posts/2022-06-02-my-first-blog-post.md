@@ -8,6 +8,8 @@ First introductions to Principal component analysis are usually delivered via so
 ## A Graphical model
 We are given access to a dataset $$X \in \mathbb{R}^{N \times d}$$, which represents $$N$$ vectors $$x_i \in \mathbb{R}^d, \quad 1 \leq i \leq N$$. Let $$ l < d$$. We assume that the observed data are samples from a conditionally multivariate Gaussian distribution given some latent variables $$Z \in \mathbb{R}^{N \times l}$$, representing $$N$$ vectors $$z_i \in \mathbb{R}^l, \quad 1 \leq i \leq N$$. The expected value of the Gaussian is $$ Z W^\top + 1_{N \times 1} \mu^\top $$ for some deterministic parameters $$W \in \mathbb{R}^{d \times l}$$ and $$\mu \in \mathbb{R}^{d}$$. The covariance matrix of the Gaussian is diagonal with deterministic entry $$\sigma^2$$. The distribution over $$Z$$ is an uncorrelated standard Gaussian. This leads to the graphical representation as shown.
 
+![PCA](PCA.PNG)
+
 ## Parameter estimation and inference
 Given our model, we may estimate the values of $$W$$ and $$\mu$$ by maximum likelihood estimation, and infer the distribution over $$Z$$ by examining the posterior. Since the Gaussian distribution is in some sense closed under marginalisation and conditioning, the marginal likelihood and posterior can be found in closed form. These are
 
