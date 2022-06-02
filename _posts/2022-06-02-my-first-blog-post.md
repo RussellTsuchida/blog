@@ -18,3 +18,8 @@ and
 $$ p(z_i \mid x_i, W, \mu, \sigma^2) = \mathcal{N}(m, C), \\
 m = W^\top(W W^\top + \sigma^2 I)^{-1}(x_i - \mu), \\
 C = I - W^\top(W W^\top + \sigma^2 I)^{-1} W.$$
+
+Maximum likelihood estimates can be computed in closed-form or numerically, both with their own advantages and caveats. See Bishop for details. 
+
+## Why the probabilistic view can be useful
+The probabilistic view can be used as a starting point for various generalisations of PCA. [Bayesian PCA ](https://proceedings.neurips.cc/paper/1998/file/c88d8d0a6097754525e02c2246d8d27f-Paper.pdf) treats parameters $$W$$, $$\mu$$ and $$\sigma^2$$ as random variables. [Exponential family PCA](https://proceedings.neurips.cc/paper/2001/file/f410588e48dc83f2822a880a68f78923-Paper.pdf) replaces the Gaussian likelihood with an exponential family likelihood. [Bayesian exponential family PCA](https://papers.nips.cc/paper/2008/hash/5f0f5e5f33945135b874349cfbed4fb9-Abstract.html) mixes these ideas. When there is a large amount of data, computing the reduced eigendecomposition of the covariance matrix can be challenging. Numerical optimisation of the likelihood can assist in this computation, as can the EM algorithm. 
