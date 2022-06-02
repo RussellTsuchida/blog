@@ -11,7 +11,7 @@ We are given access to a dataset $$X \in \mathbb{R}^{N \times d}$$, which repres
 ## Parameter estimation and inference
 Given our model, we may estimate the values of $$W$$ and $$\mu$$ by maximum likelihood estimation, and infer the distribution over $$Z$$ by examining the posterior. Since the Gaussian distribution is in some sense closed under marginalisation and conditioning, the marginal likelihood and posterior can be found in closed form. These are
 
-$$ p(x_i \mid W, \mu, \sigma^2 ) = \mathcal{N} (\mu, W W^\top + \sigma^2 I ) $$
+$$ p(X \mid W, \mu, \sigma^2 ) = \prod_{i=1}^N p(x_i \mid W, \mu, \sigma^2 ), \quad p(x_i \mid W, \mu, \sigma^2 ) = \mathcal{N} (\mu, W W^\top + \sigma^2 I ) $$
 
 and
 
